@@ -12,25 +12,28 @@
     left: 50%;
     background: none;
     transform: translate(-50%, -50%);
+    overflow: hidden;
     box-shadow: 
         0 14px 28px rgba(0,0,0,0.25), 
         0 10px 10px rgba(0,0,0,0.22);
 }
 
 :local(.LeftBox) {
-    position: relative;
-    width: 50%;
+    position: absolute;
+    width: 60%;
     height: 100%;
-    float: left;
+    left: -5rem;
     background: #e6d72a;
+    transform: skew(25deg);
 }
 
 :local(.RightBox) {
-    position: relative;
-    width: 50%;
+    position: absolute;
+    width: 60%;
     height: 100%;
-    float: right;
+    right: -5rem;
     background: #f18d9e;
+    transform: skew(25deg);
 }
 
 :local(.Border) {
