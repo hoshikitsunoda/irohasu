@@ -1,0 +1,48 @@
+:local(.Container) {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+:local(.ColorPool) {
+    position: relative;
+    width: 50rem;
+    height: 18rem;
+    top: 45%;
+    left: 50%;
+    background: none;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 
+        0 14px 28px rgba(0,0,0,0.25), 
+        0 10px 10px rgba(0,0,0,0.22);
+}
+
+:local(.LeftBox) {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: -5rem;
+    background: #e6d72a;
+    transform: skew(25deg);
+}
+
+:local(.RightBox) {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: -5rem;
+    background: #f18d9e;
+    transform: skew(25deg);
+}
+
+:local(.Border) {
+    position: absolute;
+    width: 50rem;
+    height: 18rem;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border: 1px inset rgba(204, 204, 204, 0.15);
+}
