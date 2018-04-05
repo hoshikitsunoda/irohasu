@@ -1,0 +1,19 @@
+:local(.ColorWrapper) {
+    position: relative;
+    top: 0.4rem;
+    width: 97%;
+    margin: 0 auto;
+    height: 88%;
+    display: block;
+}
+
+:local(.Box) {
+    width: calc(5% - 2px);
+    height: 16%;
+    margin: 2px 1px 0 1px;
+    padding: 0;
+    background-color: #e6d72a;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px inset rgba(204, 204, 204, 0.15);
+}
