@@ -1,12 +1,3 @@
-:local(.ColorWrapper) {
-    position: relative;
-    top: 0.65rem;
-    width: 97%;
-    margin: 0 auto;
-    height: 90%;
-    display: block;
-}
-
 :local(.Box) {
     width: calc(5% - 2px);
     height: 16%;
@@ -18,6 +9,7 @@
     border: 1px inset rgba(204, 204, 204, 0.15);
 }
 
-:local(.active) {
+:local(.Active) {
     transform: scale(1.5);
+    box-shadow: 2px 2px 2px -1px rgba(153, 153, 153, 0.8);
 }
