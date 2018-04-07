@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import classes from './ColoBox.css'
 
-const column = [1, 2, 3, 4, 5]
+class ColorBox extends Component {
+    state = {
+        active: false
+    }
 
-const colorBox = () => {
-    return (
-        <div className={classes.ColorWrapper}>
-            {column.map(row => {
-                row = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-                return row.map((rowNum, index) => {
-                    return <div className={classes.Box} key={rowNum} id={rowNum}></div>
-                })
-            })}
-        </div>
-    )
+    zoomHandler = () => {
+        this.setState({
+            active: !this.state.active
+        })
+    }
+
+    render() {
+        const isActive = this.state.active
+                            ? classes.Active
+                            : null
+        return (
+                <div
+                    onMouseEnter={this.zoomHandler}
+                    onMouseLeave={this.zoomHandler} 
+                    onClick={this.zoomHandler}
+                    className={classes.Box + ' ' + isActive}></div>
+        )
+    }
 }
 
-export default colorBox;
+export default ColorBox;
