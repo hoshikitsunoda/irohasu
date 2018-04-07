@@ -6,17 +6,19 @@
 
 :local(.ColorPool) {
     position: relative;
-    width: 60rem;
-    height: 18rem;
-    top: 48%;
+    width: 55rem;
+    height: 20rem;
+    top: 50%;
     left: 50%;
     background: none;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    box-shadow: 
-        0 9px 32px 2px  rgba(0,0,0,0.25), 
-        0 6px 7px 2px  rgba(0,0,0,0.3),
-        0 0 2px -4px  rgba(0,0,0,0.4);
+    box-shadow:
+        inset 0 7em 10em -5em rgba(255,255,255,0.4),
+        0 0.3em 0.5em -0.2em rgba(100,100,100,0.6),
+        0 1em 2em -0.75em rgba(100,100,100,0.55),
+        0 1em 3em -0.5em rgba(100,100,100,0.3),
+        0 3em 3em -0.25em rgba(100,100,100,0.1);
 }
 
 :local(.LeftBox) {
@@ -24,7 +26,7 @@
     width: 60%;
     height: 100%;
     left: -5rem;
-    background: #e6d72a;
+    background: #C71A1B;
     transform: skew(25deg);
 }
 
@@ -33,15 +35,15 @@
     width: 60%;
     height: 100%;
     right: -5rem;
-    background: #f18d9e;
+    background: #D7BD8C;
     transform: skew(25deg);
 }
 
 :local(.Border) {
     position: absolute;
-    width: 60rem;
-    height: 18rem;
-    top: 48%;
+    width: 55rem;
+    height: 20rem;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
