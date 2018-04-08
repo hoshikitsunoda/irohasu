@@ -21,6 +21,8 @@ class ColorBox extends Component {
         const backGroundRight = colorTable.colorTable2[event.target.id]
         document.querySelector('#leftBox').style.backgroundColor = backGroundLeft
         document.querySelector('#rightBox').style.backgroundColor = backGroundRight
+        document.querySelector('#leftText').innerHTML = backGroundLeft
+        document.querySelector('#rightText').innerHTML = backGroundRight
         document.querySelector('#gradient').style.background = 
             "linear-gradient(to right, " + backGroundLeft + ", " + backGroundRight + ")"
     }
