@@ -4,7 +4,9 @@ import classes from './GradientPool.css'
 
 class GradientPool extends Component {
     render() {
-        return <div className={classes.Container}>
+        return <div 
+                id="gradient"
+                className={classes.Container}>
             <div className={classes.GradientPool}></div>
         </div>
     }

@@ -28,7 +28,7 @@
     left: -5rem;
     background: #C71A1B;
     transform: skew(25deg);
-    transition: all 0.8s ease;
+    transition: all 0.3s ease;
 }
 
 :local(.RightBox) {
@@ -38,7 +38,7 @@
     right: -5rem;
     background: #D7BD8C;
     transform: skew(25deg);
-    transition: all 0.8s ease;
+    transition: all 0.3s ease;
 }
 
 :local(.Border) {
