@@ -47,6 +47,7 @@ class ColorPoolRight extends Component {
                 <div 
                     id="rightText"
                     className={classes.RightText + ' ' + isHidden}>
+                    #d7bd8c
                 </div>
         </div>
     }
