@@ -1,35 +1,37 @@
 import React, { Component } from 'react';
 
 import classes from './ColorPoolRight.css'
-// const colorTable = require('./../../seed')
 
 class ColorPoolRight extends Component {
     state = {
-        hexCode: null,
         skew: 'skew(25deg)',
         width: '60%',
-        zIndex: 1
+        zIndex: 1,
+        hidden: false
     }
 
     showHexHandler = () => {
         this.setState({
-            hexCode: 'here is hex',
             skew: 'skew(0)',
             width: '90%',
-            zIndex: 100
+            zIndex: 100,
+            hidden: true
         })
     }
 
     hideHexHandler = () => {
         this.setState({
-            hexCode: null,
             skew: 'skew(25deg)',
             width: '60%',
-            zIndex: 0
+            zIndex: 0,
+            hidden: false
         })
     }
 
     render() {
+        const isHidden = this.state.hidden
+                            ? null
+                            : classes.Hidden
         const style = {
             transform: this.state.skew,
             width: this.state.width,
@@ -42,7 +44,10 @@ class ColorPoolRight extends Component {
                     className={classes.RightBox}
                     id="rightBox"
                     onClick={this.colorPickHandler}>
-                {this.state.hexCode}
+                <div 
+                    id="rightText"
+                    className={classes.RightText + ' ' + isHidden}>
+                </div>
         </div>
     }
 }
