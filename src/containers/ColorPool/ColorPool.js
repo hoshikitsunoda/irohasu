@@ -11,7 +11,10 @@ class ColorPool extends Component {
                         className={classes.LeftBox}
                         id="leftBox"
                         onClick={this.colorPickHandler}></div>
-                    <div className={classes.RightBox}></div>
+                    <div 
+                        className={classes.RightBox}
+                        id="rightBox"
+                        onClick={this.colorPickHandler}></div>
                 </div>
         </div>
     }

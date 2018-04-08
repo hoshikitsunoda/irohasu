@@ -18,9 +18,11 @@ class ColorBox extends Component {
 
     colorPickHandler(event) {
         const backGroundLeft = colorTable.colorTable1[event.target.id]
+        const backGroundRight = colorTable.colorTable2[event.target.id]
         document.querySelector('#leftBox').style.backgroundColor = backGroundLeft
+        document.querySelector('#rightBox').style.backgroundColor = backGroundRight
         document.querySelector('#gradient').style.background = 
-            "linear-gradient(to right, " + backGroundLeft + ", #D7BD8C)"
+            "linear-gradient(to right, " + backGroundLeft + ", " + backGroundRight + ")"
     }
 
     render() {
