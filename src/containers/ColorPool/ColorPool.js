@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import classes from './ColorPool.css'
+const colorTable = require('./../../seed')
 
 class ColorPool extends Component {
     render() {
