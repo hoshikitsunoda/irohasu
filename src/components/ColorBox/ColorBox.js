@@ -25,6 +25,8 @@ class ColorBox extends Component {
         document.querySelector('#rightText').innerHTML = backGroundRight
         document.querySelector('#gradient').style.background = 
             "linear-gradient(to right, " + backGroundLeft + ", " + backGroundRight + ")"
+        document.querySelector('#gradientText').innerHTML = 
+            "linear-gradient(to right, " + backGroundLeft + ", " + backGroundRight + ")"
     }
 
     render() {
