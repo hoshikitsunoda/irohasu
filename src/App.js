@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import ColorPool from './containers/ColorPool/ColorPool'
+import ColorPools from './containers/ColorPools/ColorPools'
 import GradientPool from './containers/GradientPool/GradientPool'
 import Palette from './containers/Palette/Palette'
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div>
         <Palette />
-        <ColorPool />
+        <ColorPools />
         <GradientPool />
       </div>
     );
