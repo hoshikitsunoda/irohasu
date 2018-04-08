@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import classes from './ColoBox.css'
+import classes from './ColorBox.css'
 
 const colorTable = require('./../../seed')
 
