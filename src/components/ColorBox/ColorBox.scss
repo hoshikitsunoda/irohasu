@@ -1,0 +1,15 @@
+:local(.Box) {
+    width: calc(5% - 2px);
+    height: 16%;
+    margin: 0 1px 0 1px;
+    padding: 0;
+    background-color: rgb(195, 195, 195);
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px inset rgba(204, 204, 204, 0.15);
+}
+
+:local(.Active) {
+    transform: scale(1.5);
+    box-shadow: 2px 2px 2px -1px rgba(153, 153, 153, 0.8);
+}
