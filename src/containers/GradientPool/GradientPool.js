@@ -30,7 +30,9 @@ class GradientPool extends Component {
             className={classes.Container}>
                 <div 
                     id="gradientText" 
-                    className={classes.GradientPool + ' ' + isHidden}></div>
+                    className={classes.GradientPool + ' ' + isHidden}>
+                    linear-gradient(to right, #c71a1b, #d7bd8c)    
+                </div>
         </div>
     }
 }
