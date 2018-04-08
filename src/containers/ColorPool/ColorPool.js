@@ -4,6 +4,12 @@ import classes from './ColorPool.css'
 const colorTable = require('./../../seed')
 
 class ColorPool extends Component {
+    state = {
+        hexCode: null,
+        skew: null,
+        width: null
+    }
+
     render() {
         return <div className={classes.Container}>
             <div className={classes.Border}></div>
