@@ -6,7 +6,8 @@ const colorTable = require('./../../seed')
 
 class ColorBox extends Component {
     state = {
-        active: false
+        active: false,
+        bgColor: colorTable.colorTable1[this.props.id]
     }
 
     zoomHandler = () => {
@@ -15,15 +16,20 @@ class ColorBox extends Component {
         })
     }
 
+    colorPickHandler(event) {
+        document.querySelector('#leftBox').style.backgroundColor = colorTable.colorTable1[event.target.id]
+    }
+
     render() {
         const isActive = this.state.active
                             ? classes.Active
                             : null
         const bgColor = {
-            backgroundColor: colorTable.colorTable1[this.props.id]
+            backgroundColor: this.state.bgColor
         }
         return (
             <div
+                onClick={this.colorPickHandler}
                 onMouseEnter={this.zoomHandler}
                 onMouseLeave={this.zoomHandler} 
                 style={bgColor}
