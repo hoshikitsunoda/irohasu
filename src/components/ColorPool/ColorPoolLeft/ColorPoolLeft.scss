@@ -6,4 +6,25 @@
     background: #C71A1B;
     transform: skew(25deg);
     transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+:local(.LeftText) {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
+    text-align: center;
+    font-size: 40px;
+    opacity: 0.8;
+    visibility: visible;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+    text-shadow: 2px 2px 2px #444;
+}
+
+:local(.Hidden) {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
 }
