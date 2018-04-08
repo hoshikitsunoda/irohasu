@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 
 import classes from './ColoBox.css'
 
+const colorTable = require('./../../seed')
+
 class ColorBox extends Component {
     state = {
-        active: false
+        active: false,
+        bgColor: colorTable.colorTable1[this.props.id]
     }
 
     zoomHandler = () => {
@@ -13,16 +16,28 @@ class ColorBox extends Component {
         })
     }
 
+    colorPickHandler(event) {
+        const backGroundLeft = colorTable.colorTable1[event.target.id]
+        document.querySelector('#leftBox').style.backgroundColor = backGroundLeft
+        document.querySelector('#gradient').style.background = 
+            "linear-gradient(to right, " + backGroundLeft + ", #D7BD8C)"
+    }
+
     render() {
         const isActive = this.state.active
                             ? classes.Active
                             : null
+        const bgColor = {
+            backgroundColor: this.state.bgColor
+        }
         return (
-                <div
-                    onMouseEnter={this.zoomHandler}
-                    onMouseLeave={this.zoomHandler} 
-                    onClick={this.zoomHandler}
-                    className={classes.Box + ' ' + isActive}></div>
+            <div
+                onClick={this.colorPickHandler}
+                onMouseEnter={this.zoomHandler}
+                onMouseLeave={this.zoomHandler} 
+                style={bgColor}
+                id={this.props.id}
+                className={classes.Box + ' ' + isActive}></div>
         )
     }
 }

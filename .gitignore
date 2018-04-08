@@ -22,3 +22,4 @@ yarn-error.log*
 
 .sass-cache
 src/**/*.css
+src/*.css
