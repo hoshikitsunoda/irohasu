@@ -6,10 +6,13 @@ class ColorPool extends Component {
     render() {
         return <div className={classes.Container}>
             <div className={classes.Border}></div>
-            <div className={classes.ColorPool}>
-                <div className={classes.LeftBox}></div>
-                <div className={classes.RightBox}></div>
-            </div>
+                <div className={classes.ColorPool}>
+                    <div 
+                        className={classes.LeftBox}
+                        id="leftBox"
+                        onClick={this.colorPickHandler}></div>
+                    <div className={classes.RightBox}></div>
+                </div>
         </div>
     }
 }
