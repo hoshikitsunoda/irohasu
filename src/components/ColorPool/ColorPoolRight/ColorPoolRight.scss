@@ -1,0 +1,9 @@
+:local(.RightBox) {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: -5rem;
+    background: #D7BD8C;
+    transform: skew(25deg);
+    transition: all 0.3s ease-in-out;
+}
