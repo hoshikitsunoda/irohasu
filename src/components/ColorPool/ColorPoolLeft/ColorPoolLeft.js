@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
+import InfoBox from '../../../containers/InfoBox/InfoBox'
 import classes from './ColorPoolLeft.css'
-// const colorTable = require('./../../seed')
 
 class ColorPoolLeft extends Component {
     state = {
@@ -50,6 +50,7 @@ class ColorPoolLeft extends Component {
                     className={classes.LeftText + ' ' + isHidden}>
                     #c71a1b
                 </div>
+                <InfoBox />
         </div>
     }
 }

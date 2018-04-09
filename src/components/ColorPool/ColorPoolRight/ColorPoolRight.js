@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import InfoBox from '../../../containers/InfoBox/InfoBox'
 import classes from './ColorPoolRight.css'
 
 class ColorPoolRight extends Component {
@@ -49,6 +50,7 @@ class ColorPoolRight extends Component {
                     className={classes.RightText + ' ' + isHidden}>
                     #d7bd8c
                 </div>
+                <InfoBox />
         </div>
     }
 }
