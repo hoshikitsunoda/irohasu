@@ -23,14 +23,19 @@ class GradientPool extends Component {
         const isHidden = this.state.hidden
                             ? null
                             : classes.Hidden
+        const isStretched = this.state.hidden
+                            ? classes.Stretched
+                            : null
         return <div 
             onMouseEnter={this.showHexHandler}
             onMouseLeave={this.hideHexHandler}
             id="gradient"
-            className={classes.Container}>
+            className={classes.Container + ' ' + isStretched}>
                 <div 
                     id="gradientText" 
-                    className={classes.GradientPool + ' ' + isHidden}></div>
+                    className={classes.GradientPool + ' ' + isHidden}>
+                    linear-gradient(to right, #c71a1b, #d7bd8c)    
+                </div>
         </div>
     }
 }

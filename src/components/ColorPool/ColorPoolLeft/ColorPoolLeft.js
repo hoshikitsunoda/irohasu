@@ -48,6 +48,7 @@ class ColorPoolLeft extends Component {
                 <div 
                     id="leftText"
                     className={classes.LeftText + ' ' + isHidden}>
+                    #c71a1b
                 </div>
         </div>
     }
