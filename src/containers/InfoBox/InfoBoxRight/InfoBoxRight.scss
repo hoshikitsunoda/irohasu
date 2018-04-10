@@ -6,9 +6,16 @@
     background: transparent;
     transition: all 0.3s ease-in-out;
     text-align: center;
+    left: 10rem;
+    top: 5%;
+    line-height: 1.6;
+    color: #FFFBEF;
+    text-shadow: 2px 2px 5px rgba(68, 68, 68, 0.6);
+    font-family: 'Tajawal', sans-serif;
 }
 
 :local(.Hidden) {
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    list-style-type: none;
 }
