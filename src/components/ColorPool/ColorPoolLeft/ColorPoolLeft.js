@@ -37,9 +37,16 @@ class ColorPoolLeft extends Component {
 
         const isActive = this.state.active
                             ? 0
-                            : 1
+                            : 0.8
 
         document.querySelector('#infoBoxLeft').style.opacity = isActive
+    }
+
+    hideIconHandler = () => {
+        this.setState({
+            active: false
+        })
+        document.querySelector('#infoBoxLeft').style.opacity = '0'
     }
 
     render() {
@@ -81,6 +88,7 @@ class ColorPoolLeft extends Component {
                 </div>
                 <div
                     onClick={this.showIconHandler}
+                    onMouseLeave={this.hideIconHandler}
                     style={iconStyle}
                     className={isHidden}>
                     <i className="fas fa-info-circle"></i>
