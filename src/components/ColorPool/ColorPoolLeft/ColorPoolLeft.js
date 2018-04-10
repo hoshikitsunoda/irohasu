@@ -38,6 +38,15 @@ class ColorPoolLeft extends Component {
             width: this.state.width,
             zIndex: this.state.zIndex
         }
+
+        const iconStyle = {
+            position: 'absolute',
+            top: '55%',
+            left: '42%',
+            color: '#FFFBEF',
+            opacity: '0.8'
+        }
+
         return  <div 
                     onMouseEnter={this.showHexHandler}
                     onMouseLeave={this.hideHexHandler}
@@ -50,6 +59,9 @@ class ColorPoolLeft extends Component {
                     className={classes.LeftText + ' ' + isHidden}>
                     #c71a1b
                 </div>
+                <i 
+                    className="fas fa-info-circle"
+                    style={iconStyle}></i>
                 <InfoBox />
         </div>
     }
