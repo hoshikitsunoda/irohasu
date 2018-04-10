@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import InfoBoxRight from '../../../containers/InfoBox/InfoBoxRight/InfoBoxRight'
 import classes from './ColorPoolRight.css'
 
 class ColorPoolRight extends Component {
@@ -28,6 +29,25 @@ class ColorPoolRight extends Component {
         })
     }
 
+    showIconHandler = () => {
+        this.setState({
+            active: !this.state.active
+        })
+
+        const isActive = this.state.active
+                            ? 0
+                            : 0.8
+
+        document.querySelector('#infoBoxRight').style.opacity = isActive
+    }
+
+    hideIconHandler = () => {
+        this.setState({
+            active: false
+        })
+        document.querySelector('#infoBoxRight').style.opacity = '0'
+    }
+
     render() {
         const isHidden = this.state.hidden
                             ? null
@@ -37,6 +57,17 @@ class ColorPoolRight extends Component {
             width: this.state.width,
             zIndex: this.state.zIndex
         }
+
+        const iconStyle = {
+            position: 'absolute',
+            top: '55%',
+            right: '42%',
+            color: '#FFFBEF',
+            opacity: '0.8',
+            zIndex: 100,
+            transition: 'all 0.3s ease-in-out'
+        }
+        
         return  <div 
                     onMouseEnter={this.showHexHandler}
                     onMouseLeave={this.hideHexHandler}
@@ -49,6 +80,14 @@ class ColorPoolRight extends Component {
                     className={classes.RightText + ' ' + isHidden}>
                     #d7bd8c
                 </div>
+                <div
+                    onClick={this.showIconHandler}
+                    onMouseLeave={this.hideIconHandler}
+                    style={iconStyle}
+                    className={isHidden}>
+                    <i className="fas fa-info-circle"></i>
+                </div>
+                <InfoBoxRight />
         </div>
     }
 }

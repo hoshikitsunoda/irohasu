@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
+import InfoBoxLeft from '../../../containers/InfoBox/InfoBoxLeft/InfoBoxLeft'
 import classes from './ColorPoolLeft.css'
-// const colorTable = require('./../../seed')
 
 class ColorPoolLeft extends Component {
     state = {
         skew: 'skew(25deg)',
         width: '60%',
         zIndex: 1,
-        hidden: false
+        hidden: false,
+        active: false
     }
 
     showHexHandler = () => {
@@ -29,15 +30,50 @@ class ColorPoolLeft extends Component {
         })
     }
 
+    showIconHandler = () => {
+        this.setState({
+            active: !this.state.active
+        })
+
+        const isActive = this.state.active
+                            ? 0
+                            : 0.8
+
+        document.querySelector('#infoBoxLeft').style.opacity = isActive
+    }
+
+    hideIconHandler = () => {
+        this.setState({
+            active: false
+        })
+        document.querySelector('#infoBoxLeft').style.opacity = '0'
+    }
+
     render() {
         const isHidden = this.state.hidden
                             ? null
                             : classes.Hidden
+
+        const isActive = this.state.active
+                            ? 'block'
+                            : 'none'
+
         const style = {
             transform: this.state.skew,
             width: this.state.width,
             zIndex: this.state.zIndex
         }
+
+        const iconStyle = {
+            position: 'absolute',
+            top: '55%',
+            left: '42%',
+            color: '#FFFBEF',
+            opacity: '0.8',
+            zIndex: 100,
+            transition: 'all 0.3s ease-in-out'
+        }
+
         return  <div 
                     onMouseEnter={this.showHexHandler}
                     onMouseLeave={this.hideHexHandler}
@@ -50,6 +86,14 @@ class ColorPoolLeft extends Component {
                     className={classes.LeftText + ' ' + isHidden}>
                     #c71a1b
                 </div>
+                <div
+                    onClick={this.showIconHandler}
+                    onMouseLeave={this.hideIconHandler}
+                    style={iconStyle}
+                    className={isHidden}>
+                    <i className="fas fa-info-circle"></i>
+                </div>
+                <InfoBoxLeft />
         </div>
     }
 }
