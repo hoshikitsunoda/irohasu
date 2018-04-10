@@ -1,0 +1,14 @@
+:local(.InfoBox) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -3rem;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+:local(.Hidden) {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}

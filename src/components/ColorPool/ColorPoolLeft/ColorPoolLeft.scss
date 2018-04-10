@@ -27,6 +27,6 @@
 
 :local(.Hidden) {
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     visibility: hidden;
 }
