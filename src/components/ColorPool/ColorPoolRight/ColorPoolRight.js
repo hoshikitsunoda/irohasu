@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import InfoBox from '../../../containers/InfoBox/InfoBox'
+import InfoBoxRight from '../../../containers/InfoBox/InfoBoxRight/InfoBoxRight'
 import classes from './ColorPoolRight.css'
 
 class ColorPoolRight extends Component {
@@ -29,6 +29,18 @@ class ColorPoolRight extends Component {
         })
     }
 
+    showIconHandler = () => {
+        this.setState({
+            active: !this.state.active
+        })
+
+        const isActive = this.state.active
+                            ? 0
+                            : 1
+
+        document.querySelector('#infoBoxRight').style.opacity = isActive
+    }
+
     render() {
         const isHidden = this.state.hidden
                             ? null
@@ -44,7 +56,9 @@ class ColorPoolRight extends Component {
             top: '55%',
             right: '42%',
             color: '#FFFBEF',
-            opacity: '0.8'
+            opacity: '0.8',
+            zIndex: 100,
+            transition: 'all 0.3s ease-in-out'
         }
         
         return  <div 
@@ -59,10 +73,13 @@ class ColorPoolRight extends Component {
                     className={classes.RightText + ' ' + isHidden}>
                     #d7bd8c
                 </div>
-                <i 
-                    className="fas fa-info-circle"
-                    style={iconStyle}></i>
-                <InfoBox />
+                <div
+                    onClick={this.showIconHandler}
+                    style={iconStyle}
+                    className={isHidden}>
+                    <i className="fas fa-info-circle"></i>
+                </div>
+                <InfoBoxRight />
         </div>
     }
 }
