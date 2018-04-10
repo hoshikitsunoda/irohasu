@@ -35,12 +35,12 @@ class InfoBox extends Component {
                 className={classes.InfoBox}
                 onMouseEnter={this.infoDataHandler}>
                 <ul>
-                    <li>color name: {this.state.name}</li>
-                    <li>rgb: {this.state.rgb}</li>
-                    <li>cmyk: {this.state.cmyk}</li>
-                    <li>hsl: {this.state.hsl}</li>
-                    <li>hsv: {this.state.hsv}</li>
-                    <li>xyz: {this.state.xyz}</li>
+                    <li>{this.state.name}</li>
+                    <li>{this.state.rgb}</li>
+                    <li>{this.state.cmyk}</li>
+                    <li>{this.state.hsl}</li>
+                    <li>{this.state.hsv}</li>
+                    <li>{this.state.xyz}</li>
                 </ul>    
             </div>
         )
