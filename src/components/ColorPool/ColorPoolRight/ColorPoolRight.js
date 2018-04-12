@@ -64,13 +64,17 @@ class ColorPoolRight extends Component {
             right: '42%',
             color: '#FFFBEF',
             opacity: '0.8',
+            filter: 'drop-shadow(1px 1px 3px rgba(68, 68, 68, 0.6))',
             zIndex: 100,
             transition: 'all 0.3s ease-in-out'
         }
         
         return  <div 
                     onMouseEnter={this.showHexHandler}
-                    onMouseLeave={this.hideHexHandler}
+                    onMouseLeave={(event) => {
+                        this.hideIconHandler()
+                        this.hideHexHandler()
+                    }}
                     style={style}
                     className={classes.RightBox}
                     id="rightBox"
@@ -82,7 +86,6 @@ class ColorPoolRight extends Component {
                 </div>
                 <div
                     onClick={this.showIconHandler}
-                    onMouseLeave={this.hideIconHandler}
                     style={iconStyle}
                     className={isHidden}>
                     <i className="fas fa-info-circle"></i>
