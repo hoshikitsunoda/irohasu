@@ -15,7 +15,7 @@ class InfoBox extends Component {
 
     infoDataHandler = () => {
         const $rightHex = document.querySelector('#rightText').innerHTML.substr(1)
-        axios.get('http://www.thecolorapi.com/id?hex=' + $rightHex)
+        axios.get('https://www.thecolorapi.com/id?hex=' + $rightHex)
                 .then(res => {
                     this.setState({
                         name: res.data.name.value,
